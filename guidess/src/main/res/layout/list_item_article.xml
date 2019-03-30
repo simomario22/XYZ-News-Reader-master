@@ -1,0 +1,52 @@
+<layout xmlns:tools="http://schemas.android.com/tools">
+<android.support.design.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.MaterialComponents.CardView"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_margin="@dimen/card_margin"
+    android:foreground="?selectableItemBackground"
+    app:cardElevation="@dimen/card_elevation"
+    tools:targetApi="lollipop">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--suppress AndroidLintContentDescription -->
+        <com.example.xyzreader.ui.CustomImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/photo_placeholder"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/article_title"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/article_margin"
+            android:textColor="@color/light_gray"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:maxLines="4" />
+
+        <TextView
+            android:id="@+id/article_subtitle"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/article_margin"
+            android:paddingRight="@dimen/article_margin"
+            android:paddingBottom="@dimen/article_margin"
+            android:textColor="#7E000000"
+            android:maxLines="2"
+            android:ellipsize="end" />
+    </LinearLayout>
+
+</android.support.design.card.MaterialCardView>
+</layout>
